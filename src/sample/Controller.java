@@ -21,7 +21,7 @@ public class Controller {
     public void pressedEnter(KeyEvent keyEvent) {
         if (keyEvent.getCode().equals(KeyCode.ENTER)){
             copyUserMessage();
-            //userMessage.clear();
+            keyEvent.consume ();
         }
     }
 
@@ -31,5 +31,6 @@ public class Controller {
         chatArea.appendText(message);
         chatArea.appendText("\n");
         userMessage.setText("");
+
     }
 }
